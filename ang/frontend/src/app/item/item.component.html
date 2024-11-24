@@ -1,0 +1,13 @@
+
+<form (ngSubmit)="addItem()"> <!-- Use ngSubmit for form submission -->
+    <input [(ngModel)]="newItem.name" name="itemName" placeholder="Name" required />
+    <input [(ngModel)]="newItem.description" name="itemDescription" placeholder="Description" />
+    <button type="submit">Add Item</button> <!-- Ensure this button is of type submit -->
+</form>
+
+<ul>
+    <li *ngFor="let item of items; let i = index">
+        {{ item.name }} - {{ item.description }}
+    </li>
+</ul>
+
